@@ -8,12 +8,28 @@ pipeline{
              }
 
             }
+            stage('Build1'){
+            steps{
+                sh 'sleep 10'
+             }
+
+            }
             stage('Test'){
             steps{
                 sh '''
                 #!/bin/bash
                 ls -lrt
                 sleep 5
+                '''    
+             }
+
+            }
+             stage('Test1'){
+            steps{
+                sh '''
+                #!/bin/bash
+                ls -lrt
+                sleep 10
                 '''    
              }
 
